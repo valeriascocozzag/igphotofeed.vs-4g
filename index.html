@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title> Instagram Photo Feed - Bootstrap </title>
+</head>
+<body>
+    <style>
+        .nav-pill .nav-link {
+            color: grey;
+        }
+
+        .nav-pill .nav-link.active {
+            color: blue;
+        }
+    </style>
+    <nav class="navbar navbar-light bg-light py-3">
+        <div class="container-fluid">
+            <div class="d-flex w-100 justify-content-between">
+                <div>
+                    <i class="fa-brands fa-instagram fa-xl"></i>
+                    <h5 class="d-inline-block fs-5">Instagram</h5>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-success me-2" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Create a new post
+                    </button>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                        </ul>
+                    </div>
+    </nav>
+    <div class="d-flex justify-content-center">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+                    <i class="fa-solid fa-table-cells"></i>
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+                    <i class="fa-solid fa-square"></i>
+                </button>
+            </li>
+        </ul>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                tabindex="0">
+                <!-- Aquí va la grilla -->
+                <div class="row">
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+                            src="/img/beach-5531919_640.jpg" class="img-fluid w-100"></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="/img/cat-7300029_640.jpg"
+                            class="img-fluid w-100"></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+                            src="/img/coast-6310250_640.jpg" class="img-fluid w-100"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="/img/drink-84533_640.jpg"
+                            class="img-fluid w-100"></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+                            src="/img/golden-retriever-head-750553_640.jpg" class="img-fluid w-100"></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+                            src="/img/italian-cuisine-6903774_640.jpg" class="img-fluid w-100"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="/img/sea-3450584_640.jpg"
+                            class="img-fluid w-100"></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+                            src="/img/tourist-attraction-111329_640.jpg" class="img-fluid w-100"></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+                            src="/img/venice-2451047_640.jpg" class="img-fluid w-100"></div>
+                </div>
+            </div>
+                <!-- Aquí va el feed -->
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                <div class="row my-4">
+                    <div class="col-4 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4"> First Post </div>
+                            <small class="align-bottom">07/01</small>
+                        </div>
+                        <img src="/img/beach-5531919_640.jpg" class="card-img-top">
+                        <div class="p-3">
+                            <p class="card-title"><strong>29.652 likes</strong>
+                            <p>
+                            <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, consequatur quo magnam fugit error recusandae dolorum temporibus ipsum sint asperiores dolor voluptatum aperiam quae autem perspiciatis similique enim qui architecto!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-4 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Second Post</div>
+                            <small class="align-bottom">08/26</small>
+                        </div>
+                        <img src="/img/cat-7300029_640.jpg" class="card-img-top">
+                        <div class="p-3">
+                            <p class="card-title"><strong>20.400 likes</strong>
+                            <p>
+                            <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque nihil doloribus explicabo ea eos optio error similique necessitatibus sunt quam nisi adipisci voluptas aliquam omnis beatae, est earum excepturi iusto..</p>
+                            </div>
+                        </div>
+                    </div>
+                <div class="row my-4">
+                    <div class="col-4 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">My favorite place</div>
+                            <small class="align-bottom">12/05</small></div>
+                                <img src="/img/coast-6310250_640.jpg" class="card-img-top">
+                                <div class="p-3">
+                                    <p class="card-title"><strong>20.630 likes</strong><p>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti sequi expedita possimus quaerat reiciendis eos delectus? Inventore qui asperiores corrupti sint? Ipsum rerum sed sint ratione quas cumque voluptas eaque.</p>
+                                </div>
+                            </div>
+                        </div>
+    <!-- Aqui tengo el modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"> 
+                        Create a new post</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Caption:</h6>
+                    <textarea class="form-control" placeholder="Add the caption of your post here"
+                        id="AddText"></textarea>
+                    <div class="row p-2">
+                        <button class="col-1 border rounded p-1 m-1 btn-light">
+                            <i class="fa-solid fa-camera"></i>
+                        </button>
+                        <button class="col-1 border rounded p-1 m-1 btn-light">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Publish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+</body>
+</html>
